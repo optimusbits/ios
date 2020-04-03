@@ -163,12 +163,20 @@ internal enum L10n {
   internal static let registrationVerifyDescription = L10n.tr("Localizable", "registration_verify_description")
   /// Enter your SMS code
   internal static let registrationVerifyTitle = L10n.tr("Localizable", "registration_verify_title")
-  /// Your data was sent to GIS.\nWe guarantee nobody will use your personal data while contacting with other people.\n\nIf you have any questions please email as at %@\nor call %@
-  internal static func sendDataAlertDescription(_ p1: String, _ p2: String) -> String {
-    return L10n.tr("Localizable", "send_data_alert_description", p1, p2)
+  /// Spróbuj wysłać dane ponownie.
+  internal static let sendDataAlertFailureDescription = L10n.tr("Localizable", "send_data_alert_failure_description")
+  /// Wysłanie historii nie powiodło się
+  internal static let sendDataAlertFailureTitle = L10n.tr("Localizable", "send_data_alert_failure_title")
+  /// W razie jakichkolwiek pytań napisz do nas na %@
+  internal static func sendDataAlertFooter(_ p1: String) -> String {
+    return L10n.tr("Localizable", "send_data_alert_footer", p1)
   }
   /// Thank you!
-  internal static let sendDataAlertTitle = L10n.tr("Localizable", "send_data_alert_title")
+  internal static let sendDataAlertSuccesTitle = L10n.tr("Localizable", "send_data_alert_succes_title")
+  /// Your data was sent to GIS.\nWe guarantee nobody will use your personal data while contacting with other people.\n\nIf you have any questions please email as at %@\nor call %@
+  internal static func sendDataAlertSuccessDescription(_ p1: String, _ p2: String) -> String {
+    return L10n.tr("Localizable", "send_data_alert_success_description", p1, p2)
+  }
   /// Cancel
   internal static let sendDataConfirmationAlertCancelBtn = L10n.tr("Localizable", "send_data_confirmation_alert_cancel_btn")
   /// Send you data only if you are SARS-CoV-2 positive
